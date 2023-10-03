@@ -3,7 +3,6 @@ package com.simplon.easyportfolio.api.repositories.users;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
@@ -21,6 +20,8 @@ public class UserRepositoryModel {
     private String firstname;
     @Column(name="email")
     private String email;
+    @Column(name="role")
+    private String role;
 
     public UserRepositoryModel(String name, String email) {
         this.name = name;

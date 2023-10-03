@@ -1,6 +1,5 @@
-package com.simplon.easyportfolio.api.controllers.users;
+package com.simplon.easyportfolio.api.controllers.portfolios;
 
-import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,14 +9,9 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserDTO {
+public class PortfolioDTO {
+    private String title;
     private String name;
     private String firstname;
     private String email;
-    private String role;
-
-    public UserDTO(String name, String email) {
-        this.name = name;
-        this.email = email;
-    }
 }

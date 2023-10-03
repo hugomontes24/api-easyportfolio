@@ -1,32 +1,26 @@
-package com.simplon.easyportfolio.api.services.users;
+package com.simplon.easyportfolio.api.services.portfolios;
 
-import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 import java.util.Optional;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserServiceModel {
+public class PortfolioServiceModel {
     public Optional<Long> id;
-
+    private String title;
     private String name;
-
     private String firstname;
-
     private String email;
 
-    private String role;
-
-    public UserServiceModel(String name, String email) {
+    public PortfolioServiceModel(String title, String name, String firstname, String email) {
+        this.title = title;
         this.name = name;
+        this.firstname = firstname;
         this.email = email;
     }
-
-
 }
